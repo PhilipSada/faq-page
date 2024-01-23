@@ -1,0 +1,134 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+
+/* Start of buttons styles*/
+
+%btn{
+    display: block;
+    align-self: center;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1;
+    transition: background-color 0.5s ease;
+    outline: none;
+    // border-radius: 0.375rem;
+   
+    cursor: pointer;
+}
+
+%btn-auth{
+    @extend %btn;
+    padding: 15px 30px;
+    width: 100%;
+    font-size: 16px;
+    background: var(--button-background-primary-color);
+    border: 1px solid var(--button-border-primary-color);
+    color: var(--button-white-color);
+    border-radius: 6px;
+
+    &:hover{
+        background-color: var(--button-background-primary-hover-color);
+    }
+}
+
+%btn-lg{
+    @extend %btn;
+    padding: 0px 25px;
+    font-size: 14px;
+    height: 40px;
+    // font-weight: 500;
+}
+
+%btn-sm{
+    @extend %btn;
+    padding: 0px 12px;
+    font-size: 14px;
+    height: 40px;
+   
+}
+%btn-md{
+    @extend %btn;
+    padding: 0px 20px;
+    font-size: 14px;
+    height: 40px;
+}
+
+%btn-full-width{
+    width: 100%;
+}
+
+%btn-primary{
+    background: var(--button-background-primary-color);
+    // border: 1px solid var(--button-border-primary-color);
+    border-radius: 5px;
+    border:none;
+    color: var(--button-white-color);
+
+    &:hover{
+        // background-color: var(--button-background-primary-hover-color);
+        background-color: darken($color: #7371EE, $amount: 5%)
+    }
+}
+%btn-secondary{
+    background: var(--button-background-secondary-color);
+    border-radius: 5px;
+    // border: 1px solid var(--button-border-secondary-color);
+    border:none;
+    color: var(--button-text-secondary-color);
+
+    &:hover{
+        background-color: var(--button-background-secondary-active-color);
+    }
+}
+%btn-tertiary{
+    background: #000;
+    border-radius: 5px;
+    // border: 1px solid var(--button-border-secondary-color);
+    border:none;
+    color: #fff;
+
+    // &:hover{
+    //     background-color: var(--button-background-secondary-active-color);
+    // }
+}
+%btn-transparent{
+    background: transparent;
+    border-radius: 5px;
+    // border: 1px solid var(--button-border-secondary-color);
+    border:#000;
+    color: #000;
+
+    // &:hover{
+    //     background-color: var(--button-background-secondary-active-color);
+    // }
+}
+
+%btn-black{
+    background-color: #000;
+    border: 1px solid #000;
+    color:#fff;
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.86);
+        color:#fff;
+    }
+}
+
+%btn-disabled{
+    cursor: not-allowed;
+    opacity: 0.8;
+    // color: #f5f5f5;
+}
+
+%btn-transparent{
+    background-color: transparent;
+    color:#000;
+    border: 1px solid $primary-color;
+}
+/* End of buttons styles*/
+
+
+
+
+
